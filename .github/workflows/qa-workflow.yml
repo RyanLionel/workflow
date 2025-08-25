@@ -1,0 +1,21 @@
+name: CI - Workflow QA
+
+on:
+  push:
+    branches: [ "qa" ]
+  pull_request:
+    branches: [ "qa" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Usando a Branch de QA - EU AMO DEVOPS ❤️
+
+      - name: Run a multi-line script
+        run: |
+          echo Este workflow executa apenas na branch QA
+          echo Pode ser usado para validar código antes de ir para a MAIN
