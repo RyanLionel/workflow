@@ -1,0 +1,16 @@
+name: CI - Workflow Básico
+
+on: [push]
+
+jobs:
+  build:
+    name: PrimeiroJob
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Executando o STEP1
+        run: |
+          echo Esse processo carrega uma mensagem
+          echo Basica para entender o workflow
+          echo EU AMO DEVOPS ❤️
