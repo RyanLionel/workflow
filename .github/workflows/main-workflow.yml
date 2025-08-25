@@ -1,0 +1,19 @@
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Usando a Branch MAIN! - EU AMO DEVOPS ❤️
+
+      - name: Run a multi-line script
+        run: |
+          echo Este workflow executa apenas na branch MAIN
+          echo Pode ser expandido para Build, Test e Deploy
